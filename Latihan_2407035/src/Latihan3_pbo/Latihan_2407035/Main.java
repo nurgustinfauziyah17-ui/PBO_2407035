@@ -1,48 +1,23 @@
 package Latihan3_pbo.Latihan_2407035;
 
-import java.util.Scanner;
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        Segitiga sTiga = new Segitiga();
 
-        Scanner input = new Scanner(System.in);
+        sTiga.setAlas(2);
+        sTiga.setTinggi(3);
+        System.out.println("Luas Segitiga adalah :" + sTiga.LuasSegitiga());
 
-        System.out.println("1. Persegi");
-        System.out.println("2. Persegi Panjang");
-        System.out.println("3. Segitiga");
-        System.out.print("Pilih Bangun Datar : ");
+        Persegi persegi = new Persegi();
+        persegi.setSisi(5);
+        System.out.println("Luas Persegi Adalah : " + persegi.LuasPersegi());
 
-        int pilih = input.nextInt();
+        PersegiPanjang persegiPanjang = new PersegiPanjang();
+        persegiPanjang.setPanjang(2);
+        persegiPanjang.setLebar(3);
+        persegiPanjang.setTinggi(6);
+        System.out.println("Luas Persegi Panjang Adalah: " + persegiPanjang.LuasPersegiPanjang());
 
-        if(pilih == 1){
-            Persegi p = new Persegi();
-            System.out.print("Masukkan sisi: ");
-            p.setSisi(input.nextDouble());
-
-            System.out.println("Luas Persegi Adalah = " + p.LuasPersegi());
-        }
-
-        else if(pilih == 2){
-            PersegiPanjang pPanjang = new PersegiPanjang();
-
-            System.out.print("Masukkan panjang: ");
-            pPanjang.setPanjang(input.nextDouble());
-
-            System.out.print("Masukkan lebar: ");
-            pPanjang.setLebar(input.nextDouble());
-
-            System.out.println("Luas Persegi Panjang Adalah = " + pPanjang.LuasPersegiPanjang());
-        }
-
-        else if(pilih == 3){
-            Segitiga sTiga = new Segitiga();
-
-            System.out.print("Masukkan alas: ");
-            sTiga.setAlas(input.nextDouble());
-
-            System.out.print("Masukkan tinggi: ");
-            sTiga.setTinggi(input.nextDouble());
-
-            System.out.println("Luas Segitiga Adalah = " + sTiga.LuasSegitiga());
-        }
     }
+
 }
